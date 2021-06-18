@@ -1,0 +1,140 @@
+@import "../../themes/variables.scss";
+
+.services__container {
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.services__content {
+  position: relative;
+  background-color: $container-color;
+  padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.services__content:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.services__icon {
+  display: block;
+  font-size: 1.5rem;
+  color: $color-primary;
+  margin-bottom: $m-1;
+}
+
+.services__title {
+  font-size: $h3-font-size;
+  margin-bottom: $m-1;
+  font-weight: $font-medium;
+}
+
+.services__button {
+  cursor: pointer;
+  font-size: $small-font-size;
+}
+
+.services__button:hover .button__icon {
+  transform: translateX(10px);
+}
+
+.services__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.services__modal-content {
+  position: relative;
+  background-color: $container-color;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.services__modal-services {
+  row-gap: 1rem;
+}
+
+.services__modal-service {
+  display: flex;
+}
+
+.services__modal-title {
+  font-size: $h3-font-size;
+  font-weight: $font-medium;
+  margin-bottom: $m-1-5;
+}
+
+.services__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: $color-primary;
+  cursor: pointer;
+}
+
+.services__modal-icon {
+  color: $color-primary;
+  margin-right: $m-0-25;
+}
+
+/* Active Modal */
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 350px) {
+  .services__container {
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
+
+  .services__content {
+    padding-right: 3.5rem;
+  }
+
+  .services__modal {
+    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .services__container {
+    grid-template-columns: repeat(2, 218px);
+    justify-content: center;
+  }
+
+  .services__icon {
+    font-size: 2rem;
+    transform: scale(2) translate(7px, -12px);
+  }
+
+  .services__content {
+    padding: 6rem 0 2rem 2.5rem;
+  }
+
+  .services__modal-content {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .services__container {
+    grid-template-columns: repeat(3, 238px);
+  }
+}

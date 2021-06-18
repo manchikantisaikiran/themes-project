@@ -1,0 +1,117 @@
+<section class="services section" id="services">
+    <h2 class="section__title">Services</h2>
+    <span class="section__subtitle">
+        What i offer
+    </span>
+
+    <div class="services__container container grid">
+        <div class="services__content">
+            <div>
+                <bi name="columns" class="services__icon"></bi>
+                <h3 class="services__title">Ui/Ux<br>Designer</h3>
+            </div>
+            <span (click)="openModal(0)" class="button button--flex button--small button--link services__button">
+                View More
+                <bi name="arrow-right-short" class="button__icon"></bi>
+            </span>
+
+            <div class="services__modal" [ngClass]="{'active-modal':showModal === 0}">
+                <div class="services__modal-content">
+                    <h4 class="services__modal-title">Ui/Ux<br>Designer</h4>
+                    <bi (click)="closeModal(0)" name="x" class="services__modal-close"></bi>
+                    <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>I develop the user Interface</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>Web page development</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>create ux interactions</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>I position your company brand</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="services__content">
+            <div>
+                <bi name="code" class="services__icon"></bi>
+                <h3 class="services__title">FrontEnd<br>Developer</h3>
+            </div>
+            <span (click)="openModal(1)" class="button button--flex button--small button--link services__button">
+                View More
+                <bi name="arrow-right-short" class="button__icon"></bi>
+            </span>
+
+            <div class="services__modal" [ngClass]="{'active-modal':showModal === 1}">
+                <div class="services__modal-content">
+                    <h4 class="services__modal-title">FrontEnd<br>Developer</h4>
+                    <bi (click)="closeModal(1)" name="x" class="services__modal-close"></bi>
+                    <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>I develop the user Interface</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>Web page development</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>create ux interactions</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>I position your company brand</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="services__content">
+            <div>
+                <bi name="pencil" class="services__icon"></bi>
+                <h3 class="services__title">Branding<br>Developer</h3>
+            </div>
+            <span (click)="openModal(2)" class="button button--flex button--small button--link services__button">
+                View More
+                <bi name="arrow-right-short" class="button__icon"></bi>
+            </span>
+
+            <div class="services__modal" [ngClass]="{'active-modal':showModal === 2}">
+                <div class="services__modal-content">
+                    <h4 class="services__modal-title">Branding<br>Developer</h4>
+                    <bi (click)="closeModal(2)" name="x" class="services__modal-close"></bi>
+                    <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>I develop the user Interface</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>Web page development</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>create ux interactions</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <bi name="check-circle" class="services__modal-icon"></bi>
+                            <p>I position your company brand</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,128 @@
+@import '../../themes/variables.scss';
+
+.profile__container {
+  gap: 1rem;
+}
+
+.profile__content {
+  grid-template-columns: 0.5fr 3fr;
+  padding-top: 3.5rem;
+  align-items: center;
+}
+
+.profile__social {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+}
+
+.profile__social-icon {
+  font-size: 1.25rem;
+  color: $color-primary;
+}
+
+.profile__social-icon:hover {
+  color: $color-primary-alt;
+}
+
+.profile__blob {
+  width: 200px;
+  fill: $color-primary;
+}
+
+.profile__blob-img {
+    width: 300px;
+    transform: translate(-105px, -40px) scale(1.1);
+}
+
+.profile__data {
+  grid-column: 1/3;
+}
+
+.profile__title {
+  font-size: $big-font-size;
+}
+
+.profile__subtitle {
+  font-size: $text-color;
+  font-weight: $font-medium;
+  margin-bottom: $m-0-75;
+}
+
+.profile__description {
+  margin-bottom: $m-2;
+}
+
+.profile__scroll {
+  display: none;
+}
+
+.profile__scroll-button {
+  color: $color-primary;
+  transition: 0.3s;
+}
+
+.profile__scroll-button:hover {
+  transform: translateY(0.25rem);
+}
+
+.profile__scroll-mouse {
+  font-size: 2rem;
+  color: $color-primary;
+  transform: scale(1.2);
+
+}
+
+.profile__scroll-name {
+  font-size: $small-font-size;
+  color: $title-color;
+  font-weight: $font-medium;
+  margin-right: $m-0-25;
+}
+
+.profile__scroll-arrow {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 350px) {
+  .profile__content {
+    grid-template-columns: 0.25fr 3fr;
+  }
+
+  .profile__blob {
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .profile__container {
+    row-gap: 2.5rem;
+  }
+
+  .profile__content {
+    padding-top: 5.5rem;
+    column-gap: 2rem;
+  }
+
+  .profile__blob {
+    width: 270px;
+  }
+
+  .profile__scroll {
+    display: block;
+  }
+
+  .profile__scroll-button {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .profile__blob {
+    width: 320px;
+  }
+
+  .profile__social {
+    transform: translateX(-6rem);
+  }
+}

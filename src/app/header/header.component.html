@@ -1,0 +1,86 @@
+<header [ngClass]="headerScrollClass" class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo"><app-logo></app-logo></a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list grid">
+                <li class="nav__item" *ngIf="isLoggedIn">
+                    <a routerLink='./dashboard' fragment="home" [class.active]="(activeFragment | async)==='home'" class="nav__link">
+                        <bi name="house" class="nav__icon"></bi> Home
+                    </a>
+                </li>
+                <!-- <li class="nav__item">
+                    <a href="#about" class="nav__link">
+                        <bi name="person" class="nav__icon"></bi> About
+                    </a>
+                </li> -->
+                <!-- <li class="nav__item">
+                    <a href="#skills" class="nav__link">
+                        <bi name="file-earmark-text" class="nav__icon"></bi> Skills
+                    </a>
+                </li> -->
+                <li class="nav__item" *ngIf="isLoggedIn">
+                    <a routerLink='./dashboard' fragment="services" [class.active]="(activeFragment | async)==='services'" class="nav__link">
+                        <bi name="briefcase" class="nav__icon"></bi> Services
+                    </a>
+                </li>
+                <!-- <li class="nav__item">
+                    <a href="#portfolio" class="nav__link">
+                        <bi name="images" class="nav__icon"></bi> Portfolio
+                    </a>
+                </li> -->
+                <li class="nav__item" *ngIf="isLoggedIn">
+                    <a routerLink='./dashboard' fragment="contact" [class.active]="(activeFragment | async)==='contact'" class="nav__link">
+                        <bi name="person-lines-fill" class="nav__icon"></bi> Contact Me
+                    </a>
+                </li>
+                <li class="nav__item" *ngIf="isLoggedIn">
+                    <a routerLink='login' (click)="onLogout()" class="nav__link">
+                        <bi name="person-lines-fill" class="nav__icon"></bi> Logout
+                    </a>
+                </li>
+                <li class="nav__item" *ngIf="!isLoggedIn">
+                    <a routerLink='login' routerLinkActive="active-link" class="nav__link">
+                        <bi name="person-lines-fill" class="nav__icon"></bi> Login
+                    </a>
+                </li>
+                <bi name="x" class="nav__close" id="nav-close"></bi>
+            </ul>
+        </div>
+        <div class="nav__btns">
+            <bi name="gear-fill" class="nav__icon gear" (click)="toggleTheme()"></bi>
+            <!-- <bi name="moon" class="change-theme" id="theme-button"></bi> -->
+            <div class="nav__toggle" id="nav-toggle">
+                <bi name="list" class="nav__icon"></bi>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="section__theme section" [ngClass]="sectionThemeClass">
+    <h2 class="section__title">Settings</h2>
+    <h3 class="section__subtitle">Select theme</h3>
+    <div class="change-mode section">
+        <bi name="brightness-high" class="change-theme-icon" title="switch to light mode"
+            (click)="changeThemeMode('light');toggleTheme()" id="sun" [ngClass]="{'active-mode':activeThemeMode==='light'}"></bi>
+        <bi name="moon-fill" class="change-theme-icon" id="moon" (click)="changeThemeMode('dark');toggleTheme()" title="switch to dark mode"
+            [ngClass]="{'active-mode':activeThemeMode==='dark'}"></bi>
+    </div>
+    <div class="change-theme-container grid">
+        <div class="default change-theme-item nav__logo"
+        [ngClass]="{'active-theme':activeTheme==='default'}" (click)="changeTheme('default');toggleTheme()">
+            Default
+        </div>
+        <div class="bootstrap change-theme-item nav__logo"
+        [ngClass]="{'active-theme':activeTheme==='bootstrap'}" (click)="changeTheme('bootstrap');toggleTheme()">
+            Bootstrap
+        </div>
+        <div class="material change-theme-item nav__logo"
+        [ngClass]="{'active-theme':activeTheme==='material'}" (click)="changeTheme('material');toggleTheme()">
+            Material
+        </div>
+    </div>
+</div>
+
+
+<div class="overlay" [ngClass]="sectionOverlayClass" (click)="toggleTheme()"></div>

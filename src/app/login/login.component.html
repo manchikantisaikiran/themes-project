@@ -1,0 +1,28 @@
+<div class="container grid form__container">
+    <div class="form__box">
+        <span class="section__title form__title">Welcome,</span>
+        <span class="section__subtitle form__subtitle">Login to continue!</span>
+        <form>
+            <div class="form__item">
+                <label class="form__label" for="username">
+                    UserName
+                </label>
+                <input type="text" class="form__input" id="username">
+                <bi name="person-circle" class="form__icon"></bi>
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="password">Password</label>
+                <input type="password" class="form__input" id="password">
+                <bi name="key" class="form__icon"></bi>
+                <span class="forgort__password-link"><a routerLink='../forgot-password'>Forgot Password?</a></span>
+            </div>
+            <div class="form__button-container">
+                <button (click)="onLogin($event)" class="button form__button" id="form-button">Login</button>
+            </div>
+        </form>
+        <div class="switch-forms">
+            <span class="form__link-description">i'm a new user,&nbsp;
+                <a class="form__link" routerLink="../register">Sign Up</a></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<footer class="footer">
+    <div class="footer__bg">
+        <div class="footer__container container grid">
+            <div>
+                <h1 class="footer__title"><app-logo></app-logo></h1>
+                <!-- <span class="footer__subtitle">Frontend Developer</span> -->
+            </div>
+            <ul class="footer__links" *ngIf="isLoggedIn">
+                <li>
+                    <a routerLink = "./dashboard" fragment="home" class="footer__link">Home</a>
+                </li>
+                <li>
+                    <a routerLink = "./dashboard" fragment="services" class="footer__link">Services</a>
+                </li>
+                <li>
+                    <a routerLink = "./dashboard" fragment="contact" class="footer__link">Contact Me</a>
+                </li>
+            </ul>
+
+            <ul class="footer__links" *ngIf="!isLoggedIn">
+                <li>
+                    <a routerLink = "login" class="footer__link">Login</a>
+                </li>
+            </ul>
+
+            <div class="footer__socials">
+                <a href="https://www.facebook.com" target="_blank" class="footer__social">
+                    <bi name="facebook"></bi>
+                </a>
+                <a href="https://github.com" target="_blank" class="footer__social">
+                    <bi name="github"></bi>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="footer__social">
+                    <bi name="linkedin"></bi>
+                </a>
+            </div>
+            <div class="copyright">
+                <p class="footer__copy">No&nbsp;&#169; copyright issues.</p>
+                <p class="copyright__description">Feel free to copy. If you need any help, ping me!</p>
+            </div>
+        </div>
+    </div>
+
+</footer>

@@ -1,0 +1,34 @@
+<div class="container grid form__container">
+    <div class="form__box">
+        <span class="section__title form__title">Create Account,</span>
+        <span class="section__subtitle form__subtitle">Sign Up to get started!</span>
+        <form>
+            <div class="form__item">
+                <label class="form__label" for="username">
+                    UserName
+                </label>
+                <input type="text" class="form__input" id="username">
+                <bi name="person-circle" class="form__icon"></bi>
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="email">
+                    Email id
+                </label>
+                <input type="email" class="form__input" id="email">
+                <bi name="envelope" class="form__icon"></bi>
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="password">Password</label>
+                <input type="password" class="form__input" id="password">
+                <bi name="key" class="form__icon"></bi>
+            </div>
+            <div class="form__button-container">
+                <button type="submit" (click)="registerUser($event)" class="button form__button" id="form-button">Sign Up</button>
+            </div>
+        </form>
+        <div class="switch-forms">
+            <span class="form__link-description">i'm already a member,&nbsp;<a routerLink="../login"
+                    class="form__link">Sign In</a></span>
+        </div>
+    </div>
+</div>
